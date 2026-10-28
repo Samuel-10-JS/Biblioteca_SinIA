@@ -1,0 +1,15 @@
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\bin\Debug\net10.0\Biblioteca.exe
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\bin\Debug\net10.0\Biblioteca.deps.json
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\bin\Debug\net10.0\Biblioteca.runtimeconfig.json
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\bin\Debug\net10.0\Biblioteca.dll
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\bin\Debug\net10.0\Biblioteca.pdb
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.AssemblyInfo.cs
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.sourcelink.json
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.dll
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\refint\Biblioteca.dll
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.pdb
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\Biblioteca.genruntimeconfig.cache
+C:\Users\samue\Documents\Biblioteca_SinIA\Biblioteca\obj\Debug\net10.0\ref\Biblioteca.dll
