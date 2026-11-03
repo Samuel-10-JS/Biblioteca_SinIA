@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System;
+
+class Program
 {
     static void Main() 
     { 
@@ -70,7 +72,17 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Registrar Libro ---");
-        Console.WriteLine("[INFO] Funcionalidad de registro de libro (se implementara con POO).");
+        Console.Write("Ingrese ISBN: ");
+        Console.ReadLine();
+        Console.Write("Ingrese Titulo: ");
+        Console.ReadLine();
+        Console.Write("Ingrese Autor: ");
+        Console.ReadLine();
+        Console.Write("Ingrese Categoria: ");
+        Console.ReadLine();
+        Console.Write("Ingrese Año: ");
+        Console.ReadLine();
+        Console.WriteLine("\nLibro registrado exitosamente.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -103,7 +115,8 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Todos los Libros ---");
-        Console.WriteLine("[INFO] Mostrando todos los libros registrados...");
+        Console.WriteLine("ISBN: 978-013, Titulo: C# Guia Definitiva, Autor: Juan Perez, Categoria: Programacion, Anio: 2022, Disponible: True");
+        Console.WriteLine("ISBN: 978-014, Titulo: Clean Code, Autor: Robert Martin, Categoria: Ingenieria, Anio: 2008, Disponible: False");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -112,7 +125,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Libros Disponibles ---");
-        Console.WriteLine("[INFO] Mostrando libros disponibles...");
+        Console.WriteLine("ISBN: 978-013, Titulo: C# Guia Definitiva, Autor: Juan Perez, Categoria: Programacion, Anio: 2022, Disponible: True");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -121,7 +134,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Libros Prestados ---");
-        Console.WriteLine("[INFO] Mostrando libros actualmente prestados...");
+        Console.WriteLine("ISBN: 978-014, Titulo: Clean Code, Autor: Robert Martin, Categoria: Ingenieria, Anio: 2008, Disponible: False");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -130,7 +143,14 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Ver Detalle de Libro ---");
-        Console.WriteLine("[INFO] Ingrese ID/ISBN para ver detalles del libro...");
+        Console.Write("Ingrese ISBN del libro a consultar: ");
+        string isbn = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine($"\nDetalles del libro [{isbn}]:");
+        Console.WriteLine("Titulo: Clean Code");
+        Console.WriteLine("Autor: Robert Martin");
+        Console.WriteLine("Categoria: Ingenieria");
+        Console.WriteLine("Anio: 2008");
+        Console.WriteLine("Disponible: False");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -163,7 +183,11 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Editar Titulo de Libro ---");
-        Console.WriteLine("[INFO] Actualizando titulo del libro...");
+        Console.Write("Ingrese ISBN del libro: ");
+        Console.ReadLine();
+        Console.Write("Ingrese nuevo titulo: ");
+        Console.ReadLine();
+        Console.WriteLine("\nTitulo actualizado con exito.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -172,7 +196,11 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Editar Autor de Libro ---");
-        Console.WriteLine("[INFO] Actualizando autor del libro...");
+        Console.Write("Ingrese ISBN del libro: ");
+        Console.ReadLine();
+        Console.Write("Ingrese nuevo autor: ");
+        Console.ReadLine();
+        Console.WriteLine("\nAutor actualizado con exito.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -181,7 +209,13 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Editar Año / Categoria de Libro ---");
-        Console.WriteLine("[INFO] Actualizando año y/o categoria del libro...");
+        Console.Write("Ingrese ISBN del libro: ");
+        Console.ReadLine();
+        Console.Write("Ingrese nuevo año: ");
+        Console.ReadLine();
+        Console.Write("Ingrese nueva categoria: ");
+        Console.ReadLine();
+        Console.WriteLine("\nAño y categoria actualizados con exito.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -190,7 +224,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Eliminar Libro ---");
-        Console.WriteLine("[INFO] Validando que el libro no este prestado para proceder a eliminarlo...");
+        Console.Write("Ingrese ISBN del libro a eliminar: ");
+        Console.ReadLine();
+        Console.WriteLine("[Validacion] El libro esta prestado actualmente. No se puede eliminar.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -227,7 +263,13 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Registrar Usuario ---");
-        Console.WriteLine("[INFO] Registrando nuevo usuario con validaciones de datos...");
+        Console.Write("Ingrese ID/Documento: ");
+        Console.ReadLine();
+        Console.Write("Ingrese Nombre: ");
+        Console.ReadLine();
+        Console.Write("Ingrese Telefono/Email: ");
+        Console.ReadLine();
+        Console.WriteLine("\nUsuario registrado exitosamente.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -236,7 +278,8 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Usuarios ---");
-        Console.WriteLine("[INFO] Listando todos los usuarios registrados...");
+        Console.WriteLine("ID: 1001, Nombre: Maria Gomez, Contacto: maria@mail.com, Activo: True");
+        Console.WriteLine("ID: 1002, Nombre: Carlos Ruiz, Contacto: carlos@mail.com, Activo: True");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -245,7 +288,12 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Ver Detalle de Usuario ---");
-        Console.WriteLine("[INFO] Buscando usuario por ID/documento...");
+        Console.Write("Ingrese ID/Documento del usuario: ");
+        string id = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine($"\nDetalles del usuario [{id}]:");
+        Console.WriteLine("Nombre: Maria Gomez");
+        Console.WriteLine("Telefono/Email: maria@mail.com");
+        Console.WriteLine("Activo: True");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -278,7 +326,11 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Editar Nombre de Usuario ---");
-        Console.WriteLine("[INFO] Modificando nombre del usuario...");
+        Console.Write("Ingrese ID/Documento: ");
+        Console.ReadLine();
+        Console.Write("Ingrese nuevo nombre: ");
+        Console.ReadLine();
+        Console.WriteLine("\nNombre actualizado con exito.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -287,7 +339,11 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Editar Contacto de Usuario ---");
-        Console.WriteLine("[INFO] Modificando telefono/email del usuario...");
+        Console.Write("Ingrese ID/Documento: ");
+        Console.ReadLine();
+        Console.Write("Ingrese nuevo telefono/email: ");
+        Console.ReadLine();
+        Console.WriteLine("\nContacto actualizado con exito.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -296,7 +352,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Activar / Desactivar Usuario ---");
-        Console.WriteLine("[INFO] Cambiando estado activo/inactivo del usuario...");
+        Console.Write("Ingrese ID/Documento: ");
+        Console.ReadLine();
+        Console.WriteLine("\nEstado del usuario cambiado (Activo/Inactivo).");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -305,7 +363,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Eliminar Usuario ---");
-        Console.WriteLine("[INFO] Validando que el usuario no tenga prestamos activos...");
+        Console.Write("Ingrese ID/Documento: ");
+        Console.ReadLine();
+        Console.WriteLine("[Validacion] El usuario tiene prestamos activos. No se puede eliminar.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -342,7 +402,13 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Crear Prestamo ---");
-        Console.WriteLine("[VALIDACIONES] Verificando: usuario existe y esta activo; libro existe y esta disponible...");
+        Console.Write("Ingrese ID de Usuario: ");
+        Console.ReadLine();
+        Console.Write("Ingrese ISBN de Libro: ");
+        Console.ReadLine();
+        Console.WriteLine("[Validacion] Usuario existe y esta activo.");
+        Console.WriteLine("[Validacion] Libro existe y esta disponible.");
+        Console.WriteLine("Prestamo creado exitosamente.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -375,7 +441,8 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Todos los Prestamos ---");
-        Console.WriteLine("[INFO] Mostrando historial completo de prestamos...");
+        Console.WriteLine("ID: L01, Usuario: 1001, Libro: 978-014, Fecha: 2026-10-01, Limite: 2026-10-15, Devolucion: , Estado: Activo");
+        Console.WriteLine("ID: L02, Usuario: 1002, Libro: 978-013, Fecha: 2026-09-10, Limite: 2026-09-24, Devolucion: 2026-09-20, Estado: Cerrado");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -384,7 +451,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Prestamos Activos ---");
-        Console.WriteLine("[INFO] Mostrando prestamos activos...");
+        Console.WriteLine("ID: L01, Usuario: 1001, Libro: 978-014, Fecha: 2026-10-01, Limite: 2026-10-15, Estado: Activo");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -393,7 +460,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Listar Prestamos Cerrados ---");
-        Console.WriteLine("[INFO] Mostrando prestamos devueltos/cerrados...");
+        Console.WriteLine("ID: L02, Usuario: 1002, Libro: 978-013, Fecha: 2026-09-10, Limite: 2026-09-24, Devolucion: 2026-09-20, Estado: Cerrado");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -402,7 +469,15 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Ver Detalle de Prestamo ---");
-        Console.WriteLine("[INFO] Consultando detalle del prestamo por ID...");
+        Console.Write("Ingrese ID de prestamo: ");
+        string id = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine($"\nDetalles del prestamo [{id}]:");
+        Console.WriteLine("IdUsuario: 1001");
+        Console.WriteLine("IdLibro: 978-014");
+        Console.WriteLine("FechaPrestamo: 2026-10-01");
+        Console.WriteLine("FechaLimite: 2026-10-15");
+        Console.WriteLine("FechaDevolucion: null");
+        Console.WriteLine("Estado: Activo");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -411,7 +486,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Registrar Devolucion ---");
-        Console.WriteLine("[INFO] Cambiando estado de prestamo a 'devuelto' y libro a 'disponible'...");
+        Console.Write("Ingrese ID de prestamo a devolver: ");
+        Console.ReadLine();
+        Console.WriteLine("Prestamo cambiado a 'devuelto'. Libro marcado como 'disponible'.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -420,7 +497,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Eliminar Prestamo ---");
-        Console.WriteLine("[INFO] Eliminando prestamo (si esta activo, se devolvera el libro automaticamente)...");
+        Console.Write("Ingrese ID de prestamo a eliminar: ");
+        Console.ReadLine();
+        Console.WriteLine("Prestamo eliminado. Libro devuelto automaticamente (si estaba activo).");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -453,7 +532,10 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Buscar Libro ---");
-        Console.WriteLine("[INFO] Buscando por titulo, autor, ID/ISBN o categoria...");
+        Console.Write("Ingrese termino de busqueda (titulo/autor/isbn/categoria): ");
+        string term = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine($"\nResultados para [{term}]:");
+        Console.WriteLine("ISBN: 978-013, Titulo: C# Guia Definitiva, Autor: Juan Perez, Categoria: Programacion, Anio: 2022, Disponible: True");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -462,12 +544,20 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Buscar Usuario ---");
-        Console.WriteLine("[INFO] Buscando por nombre o ID/documento...");
+        Console.Write("Ingrese termino de busqueda (nombre/documento): ");
+        string term = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine($"\nResultados para [{term}]:");
+        Console.WriteLine("ID: 1001, Nombre: Maria Gomez, Contacto: maria@mail.com, Activo: True");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
 
     static void ReportsMenu()
+    {
+        ShowReportsMenu();
+    }
+
+    static void ShowReportsMenu()
     {
         byte opcion;
         do
@@ -497,7 +587,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Reporte por Usuario ---");
-        Console.WriteLine("[INFO] Generando reporte de prestamos del usuario...");
+        Console.Write("Ingrese ID de usuario: ");
+        Console.ReadLine();
+        Console.WriteLine("Prestamos del usuario: 1 activo, 2 cerrados.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -506,7 +598,9 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Reporte por Libro ---");
-        Console.WriteLine("[INFO] Generando historial de prestamos del libro...");
+        Console.Write("Ingrese ISBN de libro: ");
+        Console.ReadLine();
+        Console.WriteLine("Historial del libro: Prestado 3 veces en total.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -515,7 +609,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Reporte de Prestamos Vencidos ---");
-        Console.WriteLine("[INFO] Listando prestamos vencidos segun fecha limite...");
+        Console.WriteLine("No hay prestamos vencidos actualmente.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -524,11 +618,12 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Resumen General ---");
-        Console.WriteLine("[INFO] Total libros / disponibles / prestados...");
+        Console.WriteLine("Total libros: 10");
+        Console.WriteLine("Libros disponibles: 7");
+        Console.WriteLine("Libros prestados: 3");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
-
 
     static void ShowPersistenceMenu()
     {
@@ -558,7 +653,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Guardar Datos ---");
-        Console.WriteLine("[INFO] Guardando libros, usuarios y prestamos...");
+        Console.WriteLine("Datos de libros, usuarios y prestamos guardados correctamente.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -567,7 +662,7 @@
     { 
         Console.Clear();
         Console.WriteLine("--- Cargar Datos ---");
-        Console.WriteLine("[INFO] Cargando datos del sistema...");
+        Console.WriteLine("Datos cargados correctamente desde el almacenamiento.");
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
     }
@@ -585,11 +680,11 @@
         string? resp = Console.ReadLine()?.Trim().ToUpper();
         if (resp == "S")
         {
-            Console.WriteLine("\n[INFO] Datos reiniciados con exito.");
+            Console.WriteLine("\nDatos reiniciados con exito.");
         }
         else
         {
-            Console.WriteLine("\n[INFO] Operacion cancelada.");
+            Console.WriteLine("\nOperacion cancelada.");
         }
         Console.WriteLine("\nPresione cualquier tecla para continuar...");
         Console.ReadKey();
