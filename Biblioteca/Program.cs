@@ -48,9 +48,9 @@ class Program
             Console.Clear();
             Console.WriteLine("=== MENU DE LIBROS ===");
             Console.WriteLine("1. Registrar libro");
-            Console.WriteLine("2. Listar libros...");
+            Console.WriteLine("2. Listar libros");
             Console.WriteLine("3. Ver detalle de libro");
-            Console.WriteLine("4. Actualizar libro...");
+            Console.WriteLine("4. Actualizar libro");
             Console.WriteLine("5. Eliminar libro");
             Console.WriteLine("6. Volver al Menu Principal");
             Console.Write("\nSelecciona una opcion (1-6): ");
